@@ -1,16 +1,16 @@
 :root {
     --faixaHead-bg-color: #f2521e ;
     /* --faixaHead-bg-color: radial-gradient(111.41% 70.52% at 68.01% 50%, #87F1FF 0%, #00B2FF 44.58%, #1235ED 100%); */
-    --body-bg-color: #00071a;
+    --body-bg-color: #050827;
 
-    --card-bg-color: rgba(19, 39, 63, 0.5);
+    --card-bg-color: rgba(35, 38, 67, 1);
 
     --text-primary-color: #82848a;
     --text-secondary-color: #FFFFFF;
 
-    --button-primary-bg: radial-gradient(111.41% 70.52% at 68.01% 50%, #87F1FF 0%, #00B2FF 44.58%, #1235ED 100%);
+    --button-primary-bg: #f2521e ;
 
-    --button-primary-hover-bg: #00071a;
+    --button-primary-hover-bg: #0B100D;
     --button-primary-text: #00071a;
 
     --input-bg-color: #00071a;
@@ -22,7 +22,7 @@
     --checkmark-bg: #00071a;
     --checkmark-checked-bg: #FFFFFF;
     --checkmark-border: #00071a;
-    --esqueci-minha-senha-color: #17bffd;
+    --esqueci-minha-senha-color: #F2521E;
 }
 
 @font-face {
@@ -135,7 +135,7 @@ section.faixaHead {
 }
 
 .btn-primary:hover {
-    background-color: var(--button-primary-hover-bg) !important;
+    background-color: var(--button-primary-bg) !important;
     transform: scaleX(1.1);
 }
 
