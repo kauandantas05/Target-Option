@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Caio Matheus dos Santos Abra">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Language" content="pt-BR">
+
+    <link rel="icon" href="./src/img/logo/Union.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="./src/lib/bootstrap-4.6.2-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="./src/lib/bootstrap-4.6.2-dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./src/lib/bootstrap-4.6.2-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>OB Trader</title>
+</head>
+
+<body>
+
+    <section class="faixaHead"></section>
+    <section class="pb-4">
+        <div class="container">
+            <div class="row translate">
+                <div class="col-12 col-md-5 col-lg-6 align-content-center">
+
+                    <div class="logoBemVindo">
+                        <img src="./src/img/logo/logo.svg" alt="" srcset="">
+
+
+                        <h2 class="mb-0 mt-3">Olá, Seja bem vindo!</h2>
+                    </div>
+
+                </div>
+                <div class="col-12 col-md-7 col-lg-6">
+
+                    <div class="card">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab"
+                                    aria-controls="login" aria-selected="true">Login</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab"
+                                    aria-controls="register" aria-selected="false">Cadastro</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="login" role="tabpanel"
+                                aria-labelledby="login-tab">
+                                <!-- Formulário de Login -->
+                                <form class="formLogin" action="process_login.php" method="post">
+                                    <div class="form-group">
+                                        <label for="loginEmail">Digite seu Email</label>
+                                        <input type="email" class="form-control" id="loginEmail" name="email" required>
+                                    </div>
+
+                                    <div class="form-group col-12 px-0">
+                                        <label for="password">Digite sua senha</label>
+                                        <div class="password-container">
+                                            <input type="password" class="form-control" id="password">
+                                            <button type="button" class="password-toggle">
+
+
+                                                <svg class="open" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M10.625 8.5C10.625 9.06358 10.4011 9.60409 10.0026 10.0026C9.60409 10.4011 9.06358 10.625 8.5 10.625C7.93641 10.625 7.39591 10.4011 6.9974 10.0026C6.59888 9.60409 6.375 9.06358 6.375 8.5C6.375 7.93641 6.59888 7.39591 6.9974 6.9974C7.39591 6.59888 7.93641 6.375 8.5 6.375C9.06358 6.375 9.60409 6.59888 10.0026 6.9974C10.4011 7.39591 10.625 7.93641 10.625 8.5Z"
+                                                        stroke="white" stroke-width="1.41667" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M1.74109 8.50002C2.64351 5.62631 5.3288 3.54169 8.50001 3.54169C11.6719 3.54169 14.3565 5.62631 15.2589 8.50002C14.3565 11.3737 11.6719 13.4584 8.50001 13.4584C5.3288 13.4584 2.64351 11.3737 1.74109 8.50002Z"
+                                                        stroke="white" stroke-width="1.41667" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+
+
+                                                <!-- Ícone SVG para ocultar a senha -->
+                                                <svg class="close" width="17" height="17" viewBox="0 0 17 17"
+                                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_199_4040)">
+                                                        <path
+                                                            d="M7.60258 3.59553C9.25256 3.3989 10.9216 3.7477 12.3547 4.58865C13.7878 5.42961 14.9064 6.7165 15.5395 8.25283C15.5985 8.41186 15.5985 8.58679 15.5395 8.74583C15.2787 9.37675 14.9347 9.96993 14.5166 10.5096M9.9762 10.0286C9.57542 10.4157 9.03864 10.6299 8.48147 10.625C7.92431 10.6202 7.39133 10.3967 6.99734 10.0027C6.60334 9.60874 6.37986 9.07576 6.37502 8.5186C6.37018 7.96143 6.58437 7.42465 6.97145 7.02387"
+                                                            stroke="white" stroke-width="1.41667" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M12.381 12.3951C11.4414 12.9517 10.393 13.2997 9.30706 13.4154C8.22111 13.5311 7.12298 13.4119 6.08717 13.0659C5.05136 12.7198 4.10211 12.1549 3.30383 11.4097C2.50555 10.6644 1.87692 9.75615 1.4606 8.74652C1.40156 8.58749 1.40156 8.41255 1.4606 8.25352C2.08863 6.7305 3.19366 5.45224 4.60985 4.61056M1.41668 1.41669L15.5833 15.5834"
+                                                            stroke="white" stroke-width="1.41667" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </g>
+                                                    <defs>
+                                                        <clipPath id="clip0_199_4040">
+                                                            <rect width="17" height="17" fill="white" />
+                                                        </clipPath>
+                                                    </defs>
+                                                </svg>
+                                            </button>
+                                        </div>
+
+                                        <a href="#" class="esqueciasenha">Esqueci minha senha!</a>
+                                    </div>
+
+
+                                    <button type="submit" class="btn btn-primary col-12 btnLogin">FAZER LOGIN</button>
+                                </form>
+                            </div>
+
+
+                            <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                                <!-- Formulário de Cadastro -->
+                                <form action="process_register.php" method="post">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="name">Digite seu Nome</label>
+                                            <input type="text" class="form-control" id="name">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="sobrenome">Sobrenome</label>
+                                            <input type="text" class="form-control" id="sobrenome">
+                                        </div>
+                                        <div class="form-group col-12">
+                                            <label for="email">Digite um Email</label>
+                                            <input type="email" class="form-control" id="email">
+                                        </div>
+
+                                        <div class="form-group col-12">
+                                            <label for="confirmpassword">Crie uma Senha</label>
+                                            <div class="password">
+                                                <input type="password" class="form-control" id="password">
+                                                <button type="button" class="password-toggle">
+                                                    <!-- Ícone SVG para mostrar a senha -->
+                                                    <svg class="open" width="17" height="17" viewBox="0 0 17 17"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M10.625 8.5C10.625 9.06358 10.4011 9.60409 10.0026 10.0026C9.60409 10.4011 9.06358 10.625 8.5 10.625C7.93641 10.625 7.39591 10.4011 6.9974 10.0026C6.59888 9.60409 6.375 9.06358 6.375 8.5C6.375 7.93641 6.59888 7.39591 6.9974 6.9974C7.39591 6.59888 7.93641 6.375 8.5 6.375C9.06358 6.375 9.60409 6.59888 10.0026 6.9974C10.4011 7.39591 10.625 7.93641 10.625 8.5Z"
+                                                            stroke="white" stroke-width="1.41667" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M1.74109 8.50002C2.64351 5.62631 5.3288 3.54169 8.50001 3.54169C11.6719 3.54169 14.3565 5.62631 15.2589 8.50002C14.3565 11.3737 11.6719 13.4584 8.50001 13.4584C5.3288 13.4584 2.64351 11.3737 1.74109 8.50002Z"
+                                                            stroke="white" stroke-width="1.41667" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+
+                                                    <!-- Ícone SVG para ocultar a senha -->
+                                                    <svg class="close" width="17" height="17" viewBox="0 0 17 17"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_199_4040)">
+                                                            <path
+                                                                d="M7.60258 3.59553C9.25256 3.3989 10.9216 3.7477 12.3547 4.58865C13.7878 5.42961 14.9064 6.7165 15.5395 8.25283C15.5985 8.41186 15.5985 8.58679 15.5395 8.74583C15.2787 9.37675 14.9347 9.96993 14.5166 10.5096M9.9762 10.0286C9.57542 10.4157 9.03864 10.6299 8.48147 10.625C7.92431 10.6202 7.39133 10.3967 6.99734 10.0027C6.60334 9.60874 6.37986 9.07576 6.37502 8.5186C6.37018 7.96143 6.58437 7.42465 6.97145 7.02387"
+                                                                stroke="white" stroke-width="1.41667"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                            <path
+                                                                d="M12.381 12.3951C11.4414 12.9517 10.393 13.2997 9.30706 13.4154C8.22111 13.5311 7.12298 13.4119 6.08717 13.0659C5.05136 12.7198 4.10211 12.1549 3.30383 11.4097C2.50555 10.6644 1.87692 9.75615 1.4606 8.74652C1.40156 8.58749 1.40156 8.41255 1.4606 8.25352C2.08863 6.7305 3.19366 5.45224 4.60985 4.61056M1.41668 1.41669L15.5833 15.5834"
+                                                                stroke="white" stroke-width="1.41667"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_199_4040">
+                                                                <rect width="17" height="17" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group col-12">
+                                            <label for="confirmpassword">Confirme a Senha</label>
+                                            <div class="password-container">
+                                                <input type="password" class="form-control" id="password-container">
+                                                <button type="button" class="password-toggle">
+                                                    <!-- Ícone SVG para mostrar a senha -->
+                                                    <svg class="open" width="17" height="17" viewBox="0 0 17 17"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M10.625 8.5C10.625 9.06358 10.4011 9.60409 10.0026 10.0026C9.60409 10.4011 9.06358 10.625 8.5 10.625C7.93641 10.625 7.39591 10.4011 6.9974 10.0026C6.59888 9.60409 6.375 9.06358 6.375 8.5C6.375 7.93641 6.59888 7.39591 6.9974 6.9974C7.39591 6.59888 7.93641 6.375 8.5 6.375C9.06358 6.375 9.60409 6.59888 10.0026 6.9974C10.4011 7.39591 10.625 7.93641 10.625 8.5Z"
+                                                            stroke="white" stroke-width="1.41667" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M1.74109 8.50002C2.64351 5.62631 5.3288 3.54169 8.50001 3.54169C11.6719 3.54169 14.3565 5.62631 15.2589 8.50002C14.3565 11.3737 11.6719 13.4584 8.50001 13.4584C5.3288 13.4584 2.64351 11.3737 1.74109 8.50002Z"
+                                                            stroke="white" stroke-width="1.41667" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+
+                                                    <!-- Ícone SVG para ocultar a senha -->
+                                                    <svg class="close" width="17" height="17" viewBox="0 0 17 17"
+                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <g clip-path="url(#clip0_199_4040)">
+                                                            <path
+                                                                d="M7.60258 3.59553C9.25256 3.3989 10.9216 3.7477 12.3547 4.58865C13.7878 5.42961 14.9064 6.7165 15.5395 8.25283C15.5985 8.41186 15.5985 8.58679 15.5395 8.74583C15.2787 9.37675 14.9347 9.96993 14.5166 10.5096M9.9762 10.0286C9.57542 10.4157 9.03864 10.6299 8.48147 10.625C7.92431 10.6202 7.39133 10.3967 6.99734 10.0027C6.60334 9.60874 6.37986 9.07576 6.37502 8.5186C6.37018 7.96143 6.58437 7.42465 6.97145 7.02387"
+                                                                stroke="white" stroke-width="1.41667"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                            <path
+                                                                d="M12.381 12.3951C11.4414 12.9517 10.393 13.2997 9.30706 13.4154C8.22111 13.5311 7.12298 13.4119 6.08717 13.0659C5.05136 12.7198 4.10211 12.1549 3.30383 11.4097C2.50555 10.6644 1.87692 9.75615 1.4606 8.74652C1.40156 8.58749 1.40156 8.41255 1.4606 8.25352C2.08863 6.7305 3.19366 5.45224 4.60985 4.61056M1.41668 1.41669L15.5833 15.5834"
+                                                                stroke="white" stroke-width="1.41667"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="clip0_199_4040">
+                                                                <rect width="17" height="17" fill="white" />
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group col-12">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                            <label class="form-check-label" for="gridCheck1">
+                                                <span class="checkmark"></span>
+                                                Concordo com os <a href="#" class="color-terms">Termos e Condições</a>
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary col-12 mt-4 newAcount">CADASTRAR NOVA
+                                        CONTA</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="src/lib/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+
+    <script src="src/lib/bootstrap-4.6.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="src/lib/bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
